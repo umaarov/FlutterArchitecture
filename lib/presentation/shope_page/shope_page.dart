@@ -1,4 +1,4 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import '../../core/app_export.dart';
 import '../../widgets/custom_search_view.dart';
 import 'widgets/listpopulartext_item_widget.dart';
@@ -19,36 +19,39 @@ class ShopePage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        body: Container(
-          width: double.maxFinite,
-          decoration: AppDecoration.fillGray,
-          child: Column(
-            children: [
-              SizedBox(height: 29.v),
-              _buildRowsearch(context),
-              SizedBox(height: 29.v),
-              Padding(
-                padding: EdgeInsets.only(right: 7.h),
-                child: _buildRowrecommended(
-                  context,
-                  recommended: "Shope by Category ",
-                  viewallOne: "View All",
+        body: SingleChildScrollView(
+          child: Container(
+            width: double.maxFinite,
+            padding: EdgeInsets.all(15),
+            decoration: AppDecoration.fillGray,
+            child: Column(
+              children: [
+                SizedBox(height: 29.v),
+                _buildRowsearch(context),
+                SizedBox(height: 29.v),
+                Padding(
+                  padding: EdgeInsets.only(right: 7.h),
+                  child: _buildRowrecommended(
+                    context,
+                    recommended: "Shope by Category ",
+                    viewallOne: "View All",
+                  ),
                 ),
-              ),
-              SizedBox(height: 11.v),
-              _buildListpopulartext(context),
-              SizedBox(height: 34.v),
-              Padding(
-                padding: EdgeInsets.only(right: 6.h),
-                child: _buildRowrecommended(
-                  context,
-                  recommended: "Recommended",
-                  viewallOne: "View All",
+                SizedBox(height: 11.v),
+                _buildListpopulartext(context),
+                SizedBox(height: 34.v),
+                Padding(
+                  padding: EdgeInsets.only(right: 6.h),
+                  child: _buildRowrecommended(
+                    context,
+                    recommended: "Recommended",
+                    viewallOne: "View All",
+                  ),
                 ),
-              ),
-              SizedBox(height: 25.v),
-              _buildProductcard(context)
-            ],
+                SizedBox(height: 25.v),
+                _buildProductcard(context)
+              ],
+            ),
           ),
         ),
       ),
@@ -151,7 +154,7 @@ class ShopePage extends StatelessWidget {
 
   /// Navigates to the cartListScreen when the action is triggered.
   onTapImgCartone(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.cartListScreen);
+    Navigator.pushNamed(context, AppRoutes.homeContainerScreen);
   }
 
   /// Navigates to the productDetailsScreen when the action is triggered.

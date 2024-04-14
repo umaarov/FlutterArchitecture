@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../core/app_export.dart';
 import '../../../widgets/custom_elevated_button.dart';
 import '../../../widgets/custom_icon_button.dart'; // ignore: must_be_immutable
-// ignore_for_file: must_be_immutable
 
-// ignore_for_file: must_be_immutable
 class ProductcardItemWidget extends StatelessWidget {
   ProductcardItemWidget({Key? key, this.onTapProductcard})
       : super(
@@ -16,9 +14,7 @@ class ProductcardItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        onTapProductcard?.call();
-      },
+      onTap: () => onTapProductcard?.call(),
       child: Container(
         decoration: AppDecoration.outlineGray.copyWith(
           borderRadius: BorderRadiusStyle.roundedBorder5,
@@ -28,14 +24,14 @@ class ProductcardItemWidget extends StatelessWidget {
           children: [
             SizedBox(
               height: 180.v,
-              width: 183.h,
+              width: 220.h,
               child: Stack(
                 alignment: Alignment.topCenter,
                 children: [
                   CustomImageView(
                     imagePath: ImageConstant.imgRectangle31,
                     height: 180.v,
-                    width: 183.h,
+                    width: 220.h,
                     radius: BorderRadius.vertical(
                       top: Radius.circular(5.h),
                     ),

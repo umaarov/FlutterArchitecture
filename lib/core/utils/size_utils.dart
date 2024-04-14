@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;  // Import the dart:math library with an alias
 
-const double FIGMA_DESIGN_WIDTH = 428;
-const double FIGMA_DESIGN_HEIGHT = 926;
-const double FIGMA_DESIGN_STATUS_BAR = 0;
+const double WIDTH = 428;
+const double HEIGHT = 926;
+const double STATUS_BAR = 0;
 
 // Extension for responsive design metrics based on the device size
 extension ResponsiveExtension on num {
   // Calculated based on the design's width
-  double get h => ((this * SizeUtils.width) / FIGMA_DESIGN_WIDTH);
+  double get h => ((this * SizeUtils.width) / WIDTH);
   // Calculated based on the design's height, subtracting the status bar height
-  double get v => (this * (SizeUtils.height - FIGMA_DESIGN_STATUS_BAR)) / FIGMA_DESIGN_HEIGHT;
+  double get v => (this * (SizeUtils.height - STATUS_BAR)) / HEIGHT;
   // Returns the smaller dimension to adapt the size proportionally
   double get adaptSize => math.min(v, h);  // Use the min function from dart:math
   // Alias for font sizing directly using the adapted size
@@ -63,8 +63,8 @@ class SizeUtils {
   static void setScreenSize(BoxConstraints constraints, Orientation currentOrientation) {
     boxConstraints = constraints;
     orientation = currentOrientation;
-    width = constraints.maxWidth.isNonZero(defaultValue: FIGMA_DESIGN_WIDTH);
-    height = constraints.maxHeight.isNonZero(defaultValue: FIGMA_DESIGN_HEIGHT);
+    width = constraints.maxWidth.isNonZero(defaultValue: WIDTH);
+    height = constraints.maxHeight.isNonZero(defaultValue: HEIGHT);
     deviceType = determineDeviceType(width);
   }
 
