@@ -60,9 +60,9 @@ class Card1ItemWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 125.v),
+                SizedBox(height: 124.v),
                 Container(
-                  width: 180.h,
+                  width: 185.h,
                   padding: EdgeInsets.symmetric(
                     horizontal: 30.h,
                     vertical: 13.v,

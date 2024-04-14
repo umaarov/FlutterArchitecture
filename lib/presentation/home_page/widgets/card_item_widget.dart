@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../core/app_export.dart';
 import '../../../theme/custom_button_style.dart';
@@ -50,16 +51,18 @@ class CardItemWidget extends StatelessWidget {
               ],
             ),
           ),
-          CustomImageView(
-            imagePath: ImageConstant.imgRectangle12,
-            height: 140.v,
-            width: 134.h,
-            radius: BorderRadius.circular(
-              5.h,
-            ),
-            margin: EdgeInsets.only(
-              left: 52.h,
-              top: 2.v,
+          Expanded(
+            child: CustomImageView(
+              imagePath: ImageConstant.imgRectangle12,
+              height: 140.v,
+              width: 134.h,
+              radius: BorderRadius.circular(
+                5.h,
+              ),
+              margin: EdgeInsets.only(
+                left: 52.h,
+                top: 2.v,
+              ),
             ),
           )
         ],
@@ -69,12 +72,14 @@ class CardItemWidget extends StatelessWidget {
 
   /// Section Widget
   Widget _buildButtonText(BuildContext context) {
-    return CustomElevatedButton(
-      width: 100.h,
-      text: "Learn More",
-      margin: EdgeInsets.only(left: 4.h),
-      buttonStyle: CustomButtonStyles.fillGreenEf,
-      buttonTextStyle: CustomTextStyles.bodySmall12,
+    return Expanded(
+      child: CustomElevatedButton(
+        width: 100.h,
+        text: "Learn More",
+        margin: EdgeInsets.only(left: 4.h),
+        buttonStyle: CustomButtonStyles.fillGreenEf,
+        buttonTextStyle: CustomTextStyles.bodySmall12,
+      ),
     );
   }
 }

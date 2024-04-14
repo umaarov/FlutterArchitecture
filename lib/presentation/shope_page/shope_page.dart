@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 import '../../core/app_export.dart';
 import '../../widgets/custom_search_view.dart';
 import 'widgets/listpopulartext_item_widget.dart';

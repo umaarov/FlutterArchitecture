@@ -37,6 +37,7 @@ class CustomTextStyles {
   static get bodySmallPrimary => theme.textTheme.bodySmall!.copyWith(
         color: theme.colorScheme.primary,
       );
+
 // Title text style
   static get titleMediumBold => theme.textTheme.titleMedium!.copyWith(
         fontSize: 18.fSize,
@@ -53,4 +54,23 @@ class CustomTextStyles {
   static get titleSmallBlack900 => theme.textTheme.titleSmall!.copyWith(
         color: appTheme.black900,
       );
+  static get titleSmallPrimaryContainer => theme.textTheme.titleSmall!.copyWith(
+        color: theme.colorScheme.primaryContainer,
+      );
+  static get titleMediumPrimaryContainer =>
+      theme.textTheme.titleMedium!.copyWith(
+        color: theme.colorScheme.primaryContainer,
+      );
+
+  static get bodyLargePrimaryContainer => theme.textTheme.bodyLarge!.copyWith(
+        color: theme.colorScheme.primaryContainer,
+      );
+
+  static get bodyMediumErrorContainer => theme.textTheme.bodyMedium!.copyWith(
+    color: theme.colorScheme.errorContainer,
+  );
+  static get bodyMediumPrimaryContainer => theme.textTheme.bodyMedium!.copyWith(
+    color: theme.colorScheme.primaryContainer,
+  );
+
 }

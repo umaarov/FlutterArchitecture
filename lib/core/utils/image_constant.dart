@@ -3,6 +3,14 @@ class ImageConstant {
   // Image folder path
   static String imagePath = 'assets/images';
 
+  // Splash images
+
+  static String imgNotFound = '$imagePath/image_not_found.png';
+  static String imgEye = '$imagePath/img_eye.svg';
+  static String imgRectangle15 = '$imagePath/img_rectangle_15.png';
+  static String imgRectangle1522x27= '$imagePath/img_rectangle_15_22x27.png';
+  static String imgUndrawSuccessf= '$imagePath/img_undraw_successf.png';
+
 // Home - Container images
   static String imgNavHome = '$imagePath/img_nav_home.svg';
 
